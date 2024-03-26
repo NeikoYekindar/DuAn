@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Source Sans 3", sans-serif;
+}
+body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ffffff;
+  background: url("7KvcP.jpg") no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.Logo {
+  position: fixed;
+  min-width: 300px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+.Logo .logo {
+  font-size: 2em;
+  color: #ffffff;
+  user-select: none;
+}
+.Logo .navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+.Logo .navigation .BtnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+.Logo .navigation .BtnLogin-popup:hover {
+  background: #fff;
+  color: #162938;
+}
+.wrapper {
+  position: relative;
+  background: transparent;
+  max-width: 450px;
+  width: 100%;
+  border-radius: 30px;
+  border: 2px solid #8f9099;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+/*.video-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  .video-bg {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-bg {
+    width: auto;
+    height: 100%;
+  }
+}*/
+
+/*form*/
+.form {
+  padding: 20px 30px;
+  padding-top: 25px;
+}
+.form header {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.form form {
+  margin: 20px 0;
+}
+.form form .error-txt {
+  color: #721c24;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.Input {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.Input label {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.Input input {
+  outline: none;
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form from .image input {
+  font-size: 17px;
+}
+
+.form form .button {
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  display: flex;
+  width: 80%;
+  transition: 0.5s;
+  background: #333;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  color: #fefefe;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 30px;
+  align-items: center;
+  font-weight: 500;
+  margin-left: 10%;
+}
+
+.form form .button:hover {
+  background: #fff;
+  color: #162938;
+  border: 2px solid #333;
+}
+.form .link {
+  color: #fff;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 17px;
+}
+.form .link a {
+  color: #333;
+}
+.form .link a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.form form .Input i {
+  position: absolute;
+  right: 15px;
+  top: 70%;
+  color: #ccc;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.form form .Input i.active:before {
+  color: #333;
+  content: "\f070";
+}
+#eye-icon {
+  color: #ccc;
+}
+#eye-icon.active {
+  color: #ff0000;
+}
+
+/*user list*/
+.users {
+  padding: 25px 30px;
+}
+.users header,
+.users-list a {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  justify-content: space-between;
+}
+.wrapper img {
+  object-fit: cover;
+  border-radius: 100px;
+}
+.users header img {
+  height: 50px;
+  width: 50px;
+}
