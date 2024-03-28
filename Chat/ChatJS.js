@@ -1,15 +1,19 @@
+// start: Sidebar
 document
   .querySelector(".chat-sidebar-profile-toggle")
   .addEventListener("click", function (e) {
     e.preventDefault();
     this.parentElement.classList.toggle("active");
   });
+
 document.addEventListener("click", function (e) {
   if (!e.target.matches(".chat-sidebar-profile, .chat-sidebar-profile *")) {
     document.querySelector(".chat-sidebar-profile").classList.remove("active");
   }
 });
-//start:conversation
+// end: Sidebar
+
+// start: Coversation
 document
   .querySelectorAll(".conversation-item-dropdown-toggle")
   .forEach(function (item) {
@@ -27,6 +31,7 @@ document
       }
     });
   });
+
 document.addEventListener("click", function (e) {
   if (
     !e.target.matches(
@@ -40,6 +45,7 @@ document.addEventListener("click", function (e) {
       });
   }
 });
+
 document.querySelectorAll(".conversation-form-input").forEach(function (item) {
   item.addEventListener("input", function () {
     this.rows = this.value.split("\n").length;
@@ -63,3 +69,4 @@ document.querySelectorAll(".conversation-back").forEach(function (item) {
     document.querySelector(".conversation-default").classList.add("active");
   });
 });
+// end: Coversation
